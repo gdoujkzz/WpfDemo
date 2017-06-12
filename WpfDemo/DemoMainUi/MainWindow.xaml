@@ -1,0 +1,467 @@
+﻿<Window x:Class="DemoMainUi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+         Title="便民驿站"  Height="750" Width="760"
+        WindowStyle="None" WindowStartupLocation="CenterScreen" 
+        FontFamily="黑体" FontSize="14" Loaded="Window_Loaded" ResizeMode="NoResize">
+
+    <Border BorderBrush="#3B5E8A" BorderThickness="2,0,2,0" Margin="5">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+            </Grid.RowDefinitions>
+            <!--FIcon-->
+            <Border Grid.Row="0" Background="White" BorderBrush="Black" BorderThickness="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="0"  Height="40" BorderBrush="White" BorderThickness="2" Background="{x:Null}">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Images/book.png" Width="36" Height="25" RenderTransformOrigin="0.206,0.399"/>
+                            <TextBlock Text="便民驿站" HorizontalAlignment="Right" FontFamily="黑体" FontSize="16" Height="17" Width="70"/>
+                        </StackPanel>
+                    </Border>
+                    <Button Grid.Column="1" Content="首页" Height="40" Background="{x:Null}" BorderBrush="#4E81BD" BorderThickness="2"></Button>
+                    <Border Grid.Column="2" BorderBrush="White" BorderThickness="2" Height="40" Background="{x:Null}">
+                        <TextBlock x:Name="txt_Time" Text="剩余638秒"   HorizontalAlignment="Right" FontFamily="黑体" FontSize="16" Width="75"  RenderTransformOrigin="0.259,0.471" Margin="0,8"/>
+                    </Border>
+                </Grid>
+            </Border>
+            <Border Grid.Row="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="205"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="205"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"></ColumnDefinition>
+                        <ColumnDefinition Width="200"></ColumnDefinition>
+                        <ColumnDefinition Width="200"></ColumnDefinition>
+                        <ColumnDefinition Width="200"></ColumnDefinition>
+                        <ColumnDefinition Width="80"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="1" Grid.Row="1">
+                        <Grid Margin="1,1,-1,-1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="26"></RowDefinition>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="0" Background="#4E81BD" Margin="10,0,2,0">
+                                <DockPanel VerticalAlignment="Center" Margin="0,5,10,5">
+                                    <TextBlock DockPanel.Dock="Left" Text="民生" Margin="10,0,0,0"></TextBlock>
+                                    <TextBlock DockPanel.Dock="Right"  Text="更多" Margin="-80,0,0,0" Width="38" Height="19"></TextBlock>
+                                    <Button Background="White" DockPanel.Dock="Right" Width="20" Height="23" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Image Source="Images/more1.png"  Height="13"  Width="10"/>
+                                    </Button>
+                                </DockPanel>
+                            </Border>
+                            <Border Grid.Row="1" Margin="10,0,0,0">
+                                <WrapPanel Orientation="Horizontal">
+                                    <Button Width="92.5" Height="80" Margin="0,5,2.5,0" Background="#1895D1">
+                                        <StackPanel>
+                                            <Image Margin="0,6" Source="Images/oldman.png" Width="46" Height="44"></Image>
+                                            <TextBlock Text="老龄卡申办" Foreground="White" HorizontalAlignment="Center" FontSize="14"></TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Width="92.5" Height="80" Margin="0,5,2.5,0" Background="#13767E">
+                                        <StackPanel Width="90">
+                                            <!--<StackPanel.Background>
+                                                <ImageBrush ImageSource="Images/new.png"  TileMode="FlipXY" />
+                                            </StackPanel.Background>-->
+                                          
+                                            <Image Margin="6" Source="Images/hourse.png" Width="45"></Image>
+                                            <TextBlock Text="无住房证打印"  Foreground="White" HorizontalAlignment="Center" FontSize="14" Height="21" Margin="0,0,4,0" Width="86"></TextBlock>
+                                        </StackPanel>
+                                        <!--<Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                        </Grid>-->
+                                        
+                                        
+                                    </Button>
+                                    <Button Width="92.5" Height="90" Margin="0,5,2.5,0" Background="#8DBB24">
+                                        <StackPanel>
+                                            <Image Margin="0,6" Source="Images/search.png" Height="49"/>
+                                            <TextBlock Text="搜索"  Foreground="White" HorizontalAlignment="Center" FontSize="14" Height="21" Margin="-3,0"></TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Width="92.5" Height="90" Margin="0,5,2.5,0"  Background="#3EA7DA">
+                                        <StackPanel>
+                                            <Image Margin="0,6" Source="Images/marriy.png" Height="49"/>
+                                            <TextBlock Text="结婚登记预约"  Foreground="White" HorizontalAlignment="Center" FontSize="14" Height="21" Margin="-3,0"></TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                </WrapPanel>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <Border Grid.Column="2" Grid.Row="1">
+                        <Grid Margin="1,1,-1,-1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="26"></RowDefinition>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="0" Background="#4E81BD" Margin="10,0,2,0">
+                                <DockPanel VerticalAlignment="Center" Margin="0,5,10,5">
+                                    <TextBlock DockPanel.Dock="Left" Text="民生" Margin="10,0,0,0"></TextBlock>
+                                    <TextBlock DockPanel.Dock="Right"  Text="更多" Margin="-80,0,0,0" Width="38" Height="19"></TextBlock>
+                                    <Button Background="White" DockPanel.Dock="Right" Width="20" Height="23" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Image Source="Images/more1.png"  Height="13"  Width="10"/>
+                                    </Button>
+                                </DockPanel>
+                            </Border>
+                            <Border Grid.Row="1" Margin="10,0,0,0">
+                                <WrapPanel Orientation="Horizontal">
+                                    <Button Width="92.5" Height="80" Margin="0,5,2.5,0" Background="#1895D1">
+                                        <StackPanel>
+                                            <Image Margin="0,6" Source="Images/oldman.png" Width="46" Height="44"></Image>
+                                            <TextBlock Text="老龄卡申办" Foreground="White" HorizontalAlignment="Center" FontSize="14"></TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Width="92.5" Height="80" Margin="0,5,2.5,0" Background="#13767E">
+                                        <StackPanel Width="90">
+                                            <!--<StackPanel.Background>
+                                                <ImageBrush ImageSource="Images/new.png"  TileMode="FlipXY" />
+                                            </StackPanel.Background>-->
+
+                                            <Image Margin="6" Source="Images/hourse.png" Width="45"></Image>
+                                            <TextBlock Text="无住房证打印"  Foreground="White" HorizontalAlignment="Center" FontSize="14" Height="21" Margin="0,0,4,0" Width="86"></TextBlock>
+                                        </StackPanel>
+                                        <!--<Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                        </Grid>-->
+
+
+                                    </Button>
+                                    <Button Width="92.5" Height="90" Margin="0,5,2.5,0" Background="#8DBB24">
+                                        <StackPanel>
+                                            <Image Margin="0,6" Source="Images/search.png" Height="49"/>
+                                            <TextBlock Text="搜索"  Foreground="White" HorizontalAlignment="Center" FontSize="14" Height="21" Margin="-3,0"></TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Width="92.5" Height="90" Margin="0,5,2.5,0"  Background="#3EA7DA">
+                                        <StackPanel>
+                                            <Image Margin="0,6" Source="Images/marriy.png" Height="49"/>
+                                            <TextBlock Text="结婚登记预约"  Foreground="White" HorizontalAlignment="Center" FontSize="14" Height="21" Margin="-3,0"></TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                </WrapPanel>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <Border Grid.Column="3" Grid.Row="1">
+                        <Grid Margin="1,1,-1,-1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="26"></RowDefinition>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="0" Background="#4E81BD" Margin="10,0,2,0">
+                                <DockPanel VerticalAlignment="Center" Margin="0,5,10,5">
+                                    <TextBlock DockPanel.Dock="Left" Text="民生" Margin="10,0,0,0"></TextBlock>
+                                    <TextBlock DockPanel.Dock="Right"  Text="更多" Margin="-80,0,0,0" Width="38" Height="19"></TextBlock>
+                                    <Button Background="White" DockPanel.Dock="Right" Width="20" Height="23" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Image Source="Images/more1.png"  Height="13"  Width="10"/>
+                                    </Button>
+                                </DockPanel>
+                            </Border>
+                            <Border Grid.Row="1" Margin="10,0,0,0">
+                                <WrapPanel Orientation="Horizontal">
+                                    <Button Width="92.5" Height="80" Margin="0,5,2.5,0" Background="#1895D1">
+                                        <StackPanel>
+                                            <Image Margin="0,6" Source="Images/oldman.png" Width="46" Height="44"></Image>
+                                            <TextBlock Text="老龄卡申办" Foreground="White" HorizontalAlignment="Center" FontSize="14"></TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Width="92.5" Height="80" Margin="0,5,2.5,0" Background="#13767E">
+                                        <StackPanel Width="90">
+                                            <!--<StackPanel.Background>
+                                                <ImageBrush ImageSource="Images/new.png"  TileMode="FlipXY" />
+                                            </StackPanel.Background>-->
+
+                                            <Image Margin="6" Source="Images/hourse.png" Width="45"></Image>
+                                            <TextBlock Text="无住房证打印"  Foreground="White" HorizontalAlignment="Center" FontSize="14" Height="21" Margin="0,0,4,0" Width="86"></TextBlock>
+                                        </StackPanel>
+                                        <!--<Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                        </Grid>-->
+
+
+                                    </Button>
+                                    <Button Width="92.5" Height="90" Margin="0,5,2.5,0" Background="#8DBB24">
+                                        <StackPanel>
+                                            <Image Margin="0,6" Source="Images/search.png" Height="49"/>
+                                            <TextBlock Text="搜索"  Foreground="White" HorizontalAlignment="Center" FontSize="14" Height="21" Margin="-3,0"></TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Width="92.5" Height="90" Margin="0,5,2.5,0"  Background="#3EA7DA">
+                                        <StackPanel>
+                                            <Image Margin="0,6" Source="Images/marriy.png" Height="49"/>
+                                            <TextBlock Text="结婚登记预约"  Foreground="White" HorizontalAlignment="Center" FontSize="14" Height="21" Margin="-3,0"></TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                </WrapPanel>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <Border Grid.Column="1" Grid.Row="3">
+                        <Grid Margin="1,1,-1,-1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="26"></RowDefinition>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="0" Background="#4E81BD" Margin="10,0,2,0">
+                                <DockPanel VerticalAlignment="Center" Margin="0,5,10,5">
+                                    <TextBlock DockPanel.Dock="Left" Text="民生" Margin="10,0,0,0"></TextBlock>
+                                    <TextBlock DockPanel.Dock="Right"  Text="更多" Margin="-80,0,0,0" Width="38" Height="19"></TextBlock>
+                                    <Button Background="White" DockPanel.Dock="Right" Width="20" Height="23" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Image Source="Images/more1.png"  Height="13"  Width="10"/>
+                                    </Button>
+                                </DockPanel>
+                            </Border>
+                            <Border Grid.Row="1" Margin="10,0,0,0">
+                                <WrapPanel Orientation="Horizontal">
+                                    <Button Width="92.5" Height="80" Margin="0,5,2.5,0" Background="#1895D1">
+                                        <StackPanel>
+                                            <Image Margin="0,6" Source="Images/oldman.png" Width="46" Height="44"></Image>
+                                            <TextBlock Text="老龄卡申办" Foreground="White" HorizontalAlignment="Center" FontSize="14"></TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Width="92.5" Height="80" Margin="0,5,2.5,0" Background="#13767E">
+                                        <StackPanel Width="90">
+                                            <Image Margin="6" Source="Images/hourse.png" Width="45"></Image>
+                                            <TextBlock Text="无住房证打印"  Foreground="White" HorizontalAlignment="Center" FontSize="14" Height="21" Margin="0,0,4,0" Width="86"></TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Width="92.5" Height="90" Margin="0,5,2.5,0" Background="#8DBB24">
+                                        <StackPanel>
+                                            <Image Margin="0,6" Source="Images/search.png" Height="49"/>
+                                            <TextBlock Text="搜索"  Foreground="White" HorizontalAlignment="Center" FontSize="14" Height="21" Margin="-3,0"></TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Width="92.5" Height="90" Margin="0,5,2.5,0"  Background="#3EA7DA">
+                                        <StackPanel>
+                                            <Image Margin="0,6" Source="Images/marriy.png" Height="49"/>
+                                            <TextBlock Text="结婚登记预约"  Foreground="White" HorizontalAlignment="Center" FontSize="14" Height="21" Margin="-3,0"></TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                </WrapPanel>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <Border Grid.Column="2" Grid.Row="3">
+                        <Grid Margin="1,1,-1,-1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="26"></RowDefinition>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="0" Background="#4E81BD" Margin="10,0,2,0">
+                                <DockPanel VerticalAlignment="Center" Margin="0,5,10,5">
+                                    <TextBlock DockPanel.Dock="Left" Text="民生" Margin="10,0,0,0"></TextBlock>
+                                    <TextBlock DockPanel.Dock="Right"  Text="更多" Margin="-80,0,0,0" Width="38" Height="19"></TextBlock>
+                                    <Button Background="White" DockPanel.Dock="Right" Width="20" Height="23" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Image Source="Images/more1.png"  Height="13"  Width="10"/>
+                                    </Button>
+                                </DockPanel>
+                            </Border>
+                            <Border Grid.Row="1" Margin="10,0,0,0">
+                                <WrapPanel Orientation="Horizontal">
+                                    <Button Width="92.5" Height="80" Margin="0,5,2.5,0" Background="#1895D1">
+                                        <StackPanel>
+                                            <Image Margin="0,6" Source="Images/oldman.png" Width="46" Height="44"></Image>
+                                            <TextBlock Text="老龄卡申办" Foreground="White" HorizontalAlignment="Center" FontSize="14"></TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Width="92.5" Height="80" Margin="0,5,2.5,0" Background="#13767E">
+                                        <StackPanel Width="90">
+                                          
+
+                                            <Image Margin="6" Source="Images/hourse.png" Width="45"></Image>
+                                            <TextBlock Text="无住房证打印"  Foreground="White" HorizontalAlignment="Center" FontSize="14" Height="21" Margin="0,0,4,0" Width="86"></TextBlock>
+                                        </StackPanel>
+                                        <!--<Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                        </Grid>-->
+
+
+                                    </Button>
+                                    <Button Width="92.5" Height="90" Margin="0,5,2.5,0" Background="#8DBB24">
+                                        <StackPanel>
+                                            <Image Margin="0,6" Source="Images/search.png" Height="49"/>
+                                            <TextBlock Text="搜索"  Foreground="White" HorizontalAlignment="Center" FontSize="14" Height="21" Margin="-3,0"></TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Width="92.5" Height="90" Margin="0,5,2.5,0"  Background="#3EA7DA">
+                                        <StackPanel>
+                                            <Image Margin="0,6" Source="Images/marriy.png" Height="49"/>
+                                            <TextBlock Text="结婚登记预约"  Foreground="White" HorizontalAlignment="Center" FontSize="14" Height="21" Margin="-3,0"></TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                </WrapPanel>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <Border Grid.Column="3" Grid.Row="3">
+                        <Grid Margin="1,1,-1,-1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="26"></RowDefinition>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="0" Background="#4E81BD" Margin="10,0,2,0">
+                                <DockPanel VerticalAlignment="Center" Margin="0,5,10,5">
+                                    <TextBlock DockPanel.Dock="Left" Text="民生" Margin="10,0,0,0"></TextBlock>
+                                    <TextBlock DockPanel.Dock="Right"  Text="更多" Margin="-80,0,0,0" Width="38" Height="19"></TextBlock>
+                                    <Button Background="White" DockPanel.Dock="Right" Width="20" Height="23" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Image Source="Images/more1.png"  Height="13"  Width="10"/>
+                                    </Button>
+                                </DockPanel>
+                            </Border>
+                            <Border Grid.Row="1" Margin="10,0,0,0">
+                                <WrapPanel Orientation="Horizontal">
+                                    <Button Width="92.5" Height="80" Margin="0,5,2.5,0" Background="#1895D1">
+                                        <StackPanel>
+                                            <Image Margin="0,6" Source="Images/oldman.png" Width="46" Height="44"></Image>
+                                            <TextBlock Text="老龄卡申办" Foreground="White" HorizontalAlignment="Center" FontSize="14"></TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Width="92.5" Height="80" Margin="0,5,2.5,0" Background="#13767E">
+                                        <StackPanel Width="90">
+                                      
+                                            <Image Margin="6" Source="Images/hourse.png" Width="45"></Image>
+                                            <TextBlock Text="无住房证打印"  Foreground="White" HorizontalAlignment="Center" FontSize="14" Height="21" Margin="0,0,4,0" Width="86"></TextBlock>
+                                        </StackPanel>
+                                        <!--<Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                        </Grid>-->
+
+
+                                    </Button>
+                                    <Button Width="92.5" Height="90" Margin="0,5,2.5,0" Background="#8DBB24">
+                                        <StackPanel>
+                                            <Image Margin="0,6" Source="Images/search.png" Height="49"/>
+                                            <TextBlock Text="搜索"  Foreground="White" HorizontalAlignment="Center" FontSize="14" Height="21" Margin="-3,0"></TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Width="92.5" Height="90" Margin="0,5,2.5,0"  Background="#3EA7DA">
+                                        <StackPanel>
+                                            <Image Margin="0,6" Source="Images/marriy.png" Height="49"/>
+                                            <TextBlock Text="结婚登记预约"  Foreground="White" HorizontalAlignment="Center" FontSize="14" Height="21" Margin="-3,0"></TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                </WrapPanel>
+                            </Border>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+            <Border Grid.Row="2" Background="#D9D9D9" BorderBrush="Black" BorderThickness="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                        <ColumnDefinition Width="30">
+                        </ColumnDefinition>
+                        <ColumnDefinition Width="50">
+                        </ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="30">
+                        </ColumnDefinition>
+                        <ColumnDefinition Width="150"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock  Foreground="#49BBE0" TextWrapping="Wrap" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15,4,10,4" Width="75">
+                        Smart City Station
+                    </TextBlock>
+                    <Border Grid.Column="1">
+                        <Border Width="28" Height="25" Background="White">
+                            <Image  Source="Images/help.png" Width="28" RenderTransformOrigin="0.206,0.399"/>
+                        </Border>
+                    </Border>
+                    <Border Grid.Column="2">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock  Text="帮助" HorizontalAlignment="Right" FontFamily="黑体" FontSize="16" Width="70" Margin="0,10"/>
+                        </StackPanel>
+                    </Border>
+                    <Button Grid.Column="3">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Images/index.png" Width="36" Height="25" RenderTransformOrigin="0.206,0.399"/>
+                            <TextBlock Text="返回首页" HorizontalAlignment="Right" FontFamily="黑体" FontSize="16" Height="17" Width="70"/>
+                        </StackPanel>
+                    </Button>
+                    <Border Grid.Column="4">
+                        <Border Width="28" Height="25" Background="White">
+                            <Image  Source="Images/ercode.png" Width="28" RenderTransformOrigin="0.206,0.399"/>
+                        </Border>
+                    </Border>
+                    <Border Grid.Column="5">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock  Text="扫描二维码" HorizontalAlignment="Right" FontFamily="黑体" FontSize="16" Width="102" Margin="0,10"/>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</Window>

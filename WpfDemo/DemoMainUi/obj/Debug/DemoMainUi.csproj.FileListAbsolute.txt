@@ -1,0 +1,13 @@
+D:\PersonProje\WpfDemo\WpfDemo\DemoMainUi\bin\Debug\DemoMainUi.exe.config
+D:\PersonProje\WpfDemo\WpfDemo\DemoMainUi\bin\Debug\DemoMainUi.exe
+D:\PersonProje\WpfDemo\WpfDemo\DemoMainUi\bin\Debug\DemoMainUi.pdb
+D:\PersonProje\WpfDemo\WpfDemo\DemoMainUi\obj\Debug\MainWindow.g.cs
+D:\PersonProje\WpfDemo\WpfDemo\DemoMainUi\obj\Debug\App.g.cs
+D:\PersonProje\WpfDemo\WpfDemo\DemoMainUi\obj\Debug\DemoMainUi_MarkupCompile.cache
+D:\PersonProje\WpfDemo\WpfDemo\DemoMainUi\obj\Debug\MainWindow.baml
+D:\PersonProje\WpfDemo\WpfDemo\DemoMainUi\obj\Debug\DemoMainUi.g.resources
+D:\PersonProje\WpfDemo\WpfDemo\DemoMainUi\obj\Debug\DemoMainUi.Properties.Resources.resources
+D:\PersonProje\WpfDemo\WpfDemo\DemoMainUi\obj\Debug\DemoMainUi.csproj.GenerateResource.Cache
+D:\PersonProje\WpfDemo\WpfDemo\DemoMainUi\obj\Debug\DemoMainUi.exe
+D:\PersonProje\WpfDemo\WpfDemo\DemoMainUi\obj\Debug\DemoMainUi.pdb
+D:\PersonProje\WpfDemo\WpfDemo\DemoMainUi\obj\Debug\DemoMainUi.csprojResolveAssemblyReference.cache

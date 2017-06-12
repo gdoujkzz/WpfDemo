@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoMainUi", "DemoMainUi\DemoMainUi.csproj", "{D7890DE2-2E2C-4213-BC10-A3097D320C8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBUntility", "DBUntility\DBUntility.csproj", "{72B8445E-750B-4D3F-8E77-238F41BFDFB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7890DE2-2E2C-4213-BC10-A3097D320C8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7890DE2-2E2C-4213-BC10-A3097D320C8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7890DE2-2E2C-4213-BC10-A3097D320C8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7890DE2-2E2C-4213-BC10-A3097D320C8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72B8445E-750B-4D3F-8E77-238F41BFDFB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72B8445E-750B-4D3F-8E77-238F41BFDFB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72B8445E-750B-4D3F-8E77-238F41BFDFB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72B8445E-750B-4D3F-8E77-238F41BFDFB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
